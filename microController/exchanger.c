@@ -67,16 +67,17 @@ void EXCHANGER_task(void)
 	u8 i;
 	u8 delimeterStart='\r',delimeterEnd='\n';
 	static gpsApp_tstrGpsData gpsData;
+	static PA_tStrPaData PAdata;
 	static EXCHANGER_Message_t messages[]={
 			{GPS_Longitude,(u8*)(&(gpsData.pos.longitude)),BYTE_NUMBER_GPS_LONGITUDE},
 			{GPS_Latitude,(u8*)(&(gpsData.pos.latitude)),BYTE_NUMBER_GPS_LATITUDE},
 			{GPS_Time,(u8*)(&(gpsData.time.second)),BYTE_NUMBER_GPS_TIME},
 			{GPS_Date,(u8*)(&(gpsData.date.day)),BYTE_NUMBER_GPS_DATE},
-
+			{PA_Data,(u8*)(&(PAdata)),BYTE_NUMBER_PA_DATA}
 			/*TODO:Complete the rest of messages*/
 	};
 	GpsApp_getGpsData(&gpsData);
-
+	PA_getPaData(&PAdata);
 	for (i = 0; i < sizeof(messages)/sizeof(messages[0]); ++i) {
 		UART_Transmit(&delimeterStart,1,UART_EXCHANGER_CHANNEL);
 		UART_Transmit(&(messages[i].id),1,UART_EXCHANGER_CHANNEL);
@@ -94,7 +95,7 @@ u8* EXCHANGER_convertToAscii(u8* data,u16 size)
 
 	for (i = 0; i < size; ++i)
 	{
-			ret[i]=data[i]+'0';
+		ret[i]=data[i]+'0';
 	}
 	return ret;
 }

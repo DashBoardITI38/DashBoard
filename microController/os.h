@@ -14,9 +14,7 @@
 
 
 #define OS_START_MEASUREMENT TCNT1=0
-#define OS_STOP_MEASUREMENT_X1 x1=TCNT1
-#define OS_STOP_MEASUREMENT_X2 x2=TCNT1
-#define OS_STOP_MEASUREMENT_X3 x3=TCNT1
+#define OS_STOP_MEASUREMENT(x) x=TCNT1
 
 extern void OS_Init(void);
 extern void OS_Start(void);

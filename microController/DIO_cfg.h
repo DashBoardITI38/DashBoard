@@ -17,9 +17,9 @@ typedef enum{
 }DIO_mode_t;
 typedef enum{
 	/*Port A*/
-/*PA0*/	PA0 = 0,
-/*PA1*/	PA1,
-/*PA2*/	PA2,
+/*PA0*/	echo1 = 0,
+/*PA1*/	echo2,
+/*PA2*/	echo3,
 /*PA3*/	PA3,
 /*PA4*/	PA4,
 /*PA5*/	PA5,

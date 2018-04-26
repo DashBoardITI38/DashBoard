@@ -10,13 +10,32 @@
 #include "os.h"
 #include "GIE.h"
 #include "TIM0.h"
-
+#include "ICU.h"
+#include "uart.h"
+#include "ULS_Scanner.h"
+#include "ULS_Driver.h"
+#include "GpsApp.h"
+#include "GPS_Driver.h"
+#include "ParkingAssistantApp.h"
 
 void main (void)
 {
 	DIO_Init();
-	GIE_voidEnable();
+	UART_Init(UART_EXCHANGER_CHANNEL);
+	UART_Init(UART_GPS_CHANNEL);
+	ICU_init(ICU_CHANNEL0);
+	ICU_init (ICU_CHANNEL1);
+	ICU_init (ICU_CHANNEL2);
+
 	Timer0_Init();
+	///Timer1_Init();
+	UlsDriver_init();
+	GPS_init();
+	UlsDriver_init();
+	UlsScanner_init();
+	PA_init();
+	GpsApp_init();
+	GIE_voidEnable();
 	OS_Start();
 
 }

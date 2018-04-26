@@ -15,6 +15,9 @@
  * 	  1		  0			Falling EDGE
  * 	  1	  	  1			Raising EDGE
  * */
+#define ICU_CHANNEL0 0
+#define ICU_CHANNEL1 1
+#define ICU_CHANNEL2 2
 
 void ICU_init(u8 ICU_Channel);
 void ICU_Enable(u8 ICU_Channel);

@@ -16,9 +16,9 @@ void GpsApp_init(void)
 }
 void GpsApp_task(void)
 {
-	gps_tstrPosition posCpy;
-	gps_tstrDate dateCpy;
-	gps_tstrTime timeCpy;
+	static gps_tstrPosition posCpy;
+	static gps_tstrDate dateCpy;
+	static gps_tstrTime timeCpy;
 	GPS_getPosition(&posCpy);
 	GPS_getDate(&dateCpy);
 	GPS_getTime(&timeCpy);
