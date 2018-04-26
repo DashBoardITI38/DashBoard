@@ -9,9 +9,9 @@
 #include "DIO_reg.h"
 #include "DIO.h"
 
- u8* const DDR[] ={&DDRA,&DDRB,&DDRC,&DDRD};
- u8* const PORT[]={&PORTA,&PORTB,&PORTC,&PORTD};
- volatile u8* const PIN[] ={&PINA,&PINB,&PINC,&PIND};
+ u8* const DDR[] ={&DDRA,&DDRB,&DDRC,&DDRD,&DDRE,&DDRF,&DDRG,&DDRH,&DDRJ,&DDRK,&DDRL};
+ u8* const PORT[]={&PORTA,&PORTB,&PORTC,&PORTD,&PORTE,&PORTF,&PORTG,&PORTH,&PORTJ,&PORTK,&PORTL};
+ volatile u8* const PIN[] ={&PINA,&PINB,&PINC,&PIND,&PINE,&PINF,&PING,&PINH,&PINJ,&PINK,&PINL};
 void DIO_Init(void)
 {
 	u8 Counter =0;
@@ -30,6 +30,9 @@ void DIO_Init(void)
 
 		case inputWithoutPUR:
 			CLR_BIT(*DDR[(Counter/8)],(Counter%8));
+			break;
+		case reserved:
+		case notUsed:
 			break;
 		}
 	}

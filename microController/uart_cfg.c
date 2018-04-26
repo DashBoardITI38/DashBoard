@@ -8,5 +8,5 @@
 #include "uart_cfg.h"
 const uart_cfg_t uart_cfg[]=
 						  {		/*Baud	 Parity	  DataBits	StopBit/s */
-								  {9600,	0,		8,		1 }
+								  {9600,	PARITY_NO ,		8,		STOP_BIT_1 , DOUPLE_SPEED_ON}
 						  };

@@ -7,9 +7,18 @@
 
 #ifndef ICU_H_
 #define ICU_H_
-void EXTI_voidInitialization(void);
-void EXTI_voidEnable(void);
-void EXTI_voidDisable(void);
-void EXTI_voidSetFallingEdge(void);
-void EXTI_voidSetRisingEdge(void);
+
+/*
+ * 	ISCn1	ISCn0
+ * 	  0		  0			LOW LEVEL
+ * 	  0		  1			ANY EDGE
+ * 	  1		  0			Falling EDGE
+ * 	  1	  	  1			Raising EDGE
+ * */
+
+void ICU_init(u8 ICU_Channel);
+void ICU_Enable(u8 ICU_Channel);
+void ICU_Disable(u8 ICU_Channel);
+void ICU_RaisingEdge(u8 ICU_Channel);
+void ICU_FallingEdge(u8 ICU_Channel);
 #endif /* ICU_H_ */

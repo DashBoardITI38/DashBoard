@@ -8,8 +8,11 @@
 #ifndef ICU_REGISTER_H_
 #define ICU_REGISTER_H_
 
-#define MCUCR *((volatile u8*)0X55)
-#define GICR *((volatile u8*)0X5B)
-#define GIFR *((volatile u8*)0X5A)
+
+#define EICRA *((volatile u8*)0X69)
+#define EICRB *((volatile u8*)0X6A)
+#define EIMSK *((volatile u8*)0X3D)
+#define EIFR *((volatile u8*)0X3C)
+
 
 #endif /* ICU_REGISTER_H_ */

@@ -29,7 +29,7 @@ typedef struct {
 typedef struct
 {
 	gpsApp_tstrPosition pos;
-	gpsApp_tstrDate data;
+	gpsApp_tstrDate date;
 	gpsApp_tstrTime time;
 }gpsApp_tstrGpsData;
 

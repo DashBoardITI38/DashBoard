@@ -28,7 +28,6 @@ typedef struct {
 	u8 year;
 }gps_tstrDate;
 
-
 void GPS_init(void);
 void GPS_task(void);
 bool GPS_getPosition(gps_tstrPosition *pos);

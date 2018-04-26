@@ -15,7 +15,14 @@ typedef enum{
 	portA = 0,
 	portB,
 	portC,
-	portD
+	portD,
+	portE,
+	portF,
+	portG,/*JUST 6 PINS*/
+	portH,
+	portJ,
+	portK,
+	portL,
 }DIO_portName_t;
 
 typedef enum{

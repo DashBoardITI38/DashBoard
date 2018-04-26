@@ -8,6 +8,6 @@
 #ifndef TIM0_H_
 #define TIM0_H_
 
-
+void Timer0_Init(void);
 
 #endif /* TIM0_H_ */

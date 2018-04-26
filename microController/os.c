@@ -41,7 +41,7 @@ void OS_Start(void)
 
 /* Tick Timer*/
 
-ISR(TIMER0_COMP_vect)
+ISR(TIMER0_COMPA_vect)
 {
 	u8Flag=1;
 	u32osTick++;
