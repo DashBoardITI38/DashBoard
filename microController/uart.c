@@ -81,7 +81,7 @@ extern void UART_Init(u8 channelNumber)
 	*UBRRL[channelNumber]=(((u32)FOSC/(u32)(uart_cfg[channelNumber].baud*(u32)8))-1);
 }
 
-extern void UART_Transmit(u8* ptrData , u16 length, u8 channelNumber)
+extern void UART_Transmit(const u8* ptrData , u16 length, u8 channelNumber)
 {
 	u16 i;
 	for (i = 0 ; i < length ; i++)

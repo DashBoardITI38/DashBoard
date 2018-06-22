@@ -8,8 +8,8 @@
 #ifndef UART_CFG_H_
 #define UART_CFG_H_
 
-#define UART_GPS_CHANNEL 		0
-#define UART_EXCHANGER_CHANNEL  1
+#define UART_GPS_CHANNEL 		1
+#define UART_EXCHANGER_CHANNEL  2
 
 #define FOSC 16000000ul
 #define PARITY_NO  		 0
@@ -17,8 +17,8 @@
 #define PARITY_EVEN 	 2
 #define STOP_BIT_1 		 0
 #define STOP_BIT_2 		 1
-#define DOUPLE_SPEED_ON  0
-#define DOUPLE_SPEED_OFF 1
+#define DOUPLE_SPEED_ON  1
+#define DOUPLE_SPEED_OFF 0
 
 typedef struct
 {

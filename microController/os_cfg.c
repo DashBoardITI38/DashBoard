@@ -15,11 +15,27 @@
 #include "exchanger.h"
 #include "ULS_Scanner.h"
 const os_cfg_t os_cfg []={
-		{GPS_task,200},
-		{GpsApp_task,200},
-		//{UlsScanner_task,10},
-		//{PA_task,50},
+		{GpsApp_task,100},
+		{GPS_task,10},
+		{UlsScanner_task,50},
+		{PA_task,50},
 		//{OBD_task,50},
 		//{obdApp_task,50},
-		{EXCHANGER_task,50}
+		{EXCHANGER_task,100}
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

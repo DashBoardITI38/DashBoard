@@ -28,6 +28,5 @@ bool PA_getPaData(PA_tStrPaData * data)
 data->sector_C =map.sector_C;
 data->sector_R =map.sector_R;
 data->sector_L =map.sector_L;
-
-	return true;
+return true;
 }

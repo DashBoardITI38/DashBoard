@@ -9,7 +9,7 @@
 #include "os.h"
 #include "avr/interrupt.h"
 
-#define NUM_OF_TASKS 1
+#define NUM_OF_TASKS 5
 
 
 /* Tick Timer*/

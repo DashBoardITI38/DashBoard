@@ -6,24 +6,31 @@
  */
 
 #include "STD_TYPES.h"
-
+#include "uart.h"
 #include "GPS_Driver.h"
 #include "GpsApp.h"
+#include "DIO_reg.h"
+#include "BIT_MATH.h"
 static gpsApp_tstrGpsData gpsData;
 void GpsApp_init(void)
 {
-	GPS_init();
+
 }
 void GpsApp_task(void)
 {
+	 u8 static array[10]={0};
+	 u8 static length=0;
 	static gps_tstrPosition posCpy;
 	static gps_tstrDate dateCpy;
 	static gps_tstrTime timeCpy;
+	/////////////////
 	GPS_getPosition(&posCpy);
 	GPS_getDate(&dateCpy);
 	GPS_getTime(&timeCpy);
 
 	gpsData.pos.latitude=posCpy.latitude;
+	////////////////////////////////////////////////////
+	////////////////////////////////////////////////////
 	gpsData.pos.latitudeDir=posCpy.latitudeDir;
 	gpsData.pos.longitude=posCpy.longitude;
 	gpsData.pos.longitudeDir=posCpy.longitudeDir;
@@ -31,10 +38,13 @@ void GpsApp_task(void)
 	gpsData.date.day= dateCpy.day;
 	gpsData.date.month= dateCpy.month;
 	gpsData.date.year= dateCpy.year;
+	////////////////////////////////////////////////////
+	////////////////////////////////////////////////////
 
 	gpsData.time.hour=timeCpy.hour;
 	gpsData.time.minute=timeCpy.minute;
 	gpsData.time.second=timeCpy.second;
+
 }
 bool GpsApp_getGpsData(gpsApp_tstrGpsData *data)
 {

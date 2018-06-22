@@ -74,7 +74,7 @@
 
 
 extern void UART_Init(u8);
-extern void UART_Transmit(u8* ptrData , u16 length, u8 channelNumber);
+extern void UART_Transmit(const u8* ptrData , u16 length, u8 channelNumber);
 extern void UART_Receive(u8* ptrData , u16* ptrLength,u8 channelNumber);
 extern void UART_EnableReceivingInterrupt(u8 channelNumber);
 extern void UART_DisableReceivingInterrupt(u8 channelNumber);

@@ -17,9 +17,9 @@ typedef enum{
 }DIO_mode_t;
 typedef enum{
 	/*Port A*/
-/*PA0*/	echo1 = 0,
-/*PA1*/	echo2,
-/*PA2*/	echo3,
+/*PA0*/	PA0 = 0,
+/*PA1*/	PA1,
+/*PA2*/	PA2,
 /*PA3*/	PA3,
 /*PA4*/	PA4,
 /*PA5*/	PA5,
@@ -31,9 +31,9 @@ typedef enum{
 /*PB2*/	PB2,
 /*PB3*/	PB3,
 /*PB4*/	PB4,
-/*PB5*/	PB5,
-/*PB6*/	PB6,
-/*PB7*/	PB7,
+/*PB5*/	trig1,
+/*PB6*/	trig2,
+/*PB7*/	trig3,
 	/*Port C*/
 /*PC0*/	PC0,
 /*PC1*/	PC1,
@@ -44,8 +44,8 @@ typedef enum{
 /*PC6*/	PC6,
 /*PC7*/	PC7,
 	/*Port D*/
-/*PD0*/	PD0,
-/*PD1*/	PD1,
+/*PD0*/	ICU_Channel0,
+/*PD1*/	ICU_Channel1,
 /*PD2*/	PD2,
 /*PD3*/	PD3,
 /*PD4*/	PD4,
@@ -57,7 +57,7 @@ typedef enum{
 /*PE1*/	PE1,
 /*PE2*/	PE2,
 /*PE3*/	PE3,
-/*PE4*/	PE4,
+/*PE4*/ ICU_Channel4,
 /*PE5*/	PE5,
 /*PE6*/	PE6,
 /*PE7*/	PE7,

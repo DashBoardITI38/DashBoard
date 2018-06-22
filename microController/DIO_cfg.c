@@ -40,9 +40,9 @@ const DIO_cfg_t DIO_cfg[]=
 		/*PC7*/{output},
 
 			/*PortD*/
-		/*PD0*/{output},
-		/*PD1*/{output},
-		/*PD2*/{output},
+		/*PD0*/{inputWithoutPUR},
+		/*PD1*/{inputWithoutPUR},
+		/*PD2*/{inputWithoutPUR},
 		/*PD3*/{output},
 		/*PD4*/{notUsed},
 		/*PD5*/{notUsed},
@@ -50,12 +50,12 @@ const DIO_cfg_t DIO_cfg[]=
 		/*PD7*/{output},
 
 			/*PortE*/
-		/*PE0*/{output},
+		/*PE0*/{inputWithoutPUR},
 		/*PE1*/{output},
 		/*PE2*/{notUsed},
 		/*PE3*/{notUsed},
-		/*PE4*/{output},
-		/*PE5*/{output},
+		/*PE4*/{inputWithoutPUR},
+		/*PE5*/{inputWithoutPUR},
 		/*PE6*/{notUsed},
 		/*PE7*/{notUsed},
 

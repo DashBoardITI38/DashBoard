@@ -41,9 +41,9 @@ CS02CS01 CS00 Description
 void Timer0_Init(void)
 {
 TCCR0A=0x02 ;
-TCCR0B=0x05 ;// prescaller 1024
+TCCR0B=0x05 ;	// prescaller 1024
 TIFR0=0x02;
 TIMSK0=0x02;
 TCNT0=0;
-OCR0A=78;//5ms
+OCR0A=156;		//10ms
 }

@@ -8,9 +8,9 @@
 #ifndef ULS_SCANNER_H_
 #define ULS_SCANNER_H_
 
-#define RED_MAX_DIST 	1000
-#define YELLOW_MAX_DIST 2000
-#define GREEN_MAX_DIST 	3000
+#define RED_MAX_DIST 	100
+#define YELLOW_MAX_DIST 200
+#define GREEN_MAX_DIST 	300
 typedef enum
 {
 SECTOR_R=0,

@@ -18,6 +18,10 @@
 #define ICU_CHANNEL0 0
 #define ICU_CHANNEL1 1
 #define ICU_CHANNEL2 2
+#define ICU_CHANNEL3 3
+#define ICU_CHANNEL4 4
+#define ICU_CHANNEL5 5
+
 
 void ICU_init(u8 ICU_Channel);
 void ICU_Enable(u8 ICU_Channel);

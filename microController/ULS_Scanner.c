@@ -16,9 +16,10 @@ void UlsScanner_init(void)
 void UlsScanner_task(void)
 {
 	static u32 osTick=0;
+	UlsDriver_getDistance(&dist);
 	UlsDriver_Trigger(osTick%3);
 	osTick++;
-	UlsDriver_getDistance(&dist);
+
 }
 bool UlsScanner_getMap(UlsScanner_tStrMap * map)
 {
